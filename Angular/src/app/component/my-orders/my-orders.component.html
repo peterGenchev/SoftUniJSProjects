@@ -1,0 +1,22 @@
+<ul class="order-list" *ngIf="orders.length > 0">
+  <li *ngFor="let order of orders" class="order-item">
+    <!--  order details  -->
+    <h3 class="order-item-name">{{ order.name }}</h3>
+    <p class="order-item-description">{{ order.description }}</p>
+    <p class="order-item-price">Price: ${{ order.price }}</p>
+    <p class="order-item-quantity">Quantity: {{ order.quantity }}</p>
+    <p>Order ID: {{ order.orderId }}</p>
+    <button (click)="deleteOrder(order)" class="delete-button">Delete</button>
+  </li>
+</ul>
+
+<!-- message : no orders -->
+<div class="order-summary" *ngIf="orders.length === 0">
+  <p class="empty-orders-message">YOU DON'T HAVE ANY ORDERS</p>
+</div>
+
+<div class="order-summary" *ngIf="orders.length > 0">
+  <div class="total-price">Total Price for All Orders: ${{ totalOrdersPrice }}</div>
+  <button (click)="buyOrders()"  class="buy-button">Buy</button>
+  <button (click)="goBack()"  class="buy-button">back to menu</button>
+</div>

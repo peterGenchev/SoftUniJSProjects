@@ -1,0 +1,118 @@
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  }
+  
+ 
+  .menu-item-card {
+    background-color: #fefafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .menu-item-card:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  .menu-item-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+
+  .menu-item-description {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+
+  .menu-item-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00a46c;
+  }
+  
+ 
+  .add-to-cart-btn {
+    padding: 8px 16px; 
+    margin-top: 8px; 
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00a46c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #008049;
+  }
+
+  .menu-item-image {
+    width: 50%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    
+  }
+
+.category-dropdown {
+    margin-bottom: 1rem;
+  }
+  
+  #category-select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .menu-container {
+    
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .category-card {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #f5f5f5; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .button-container {
+    margin: 10px; 
+  }
+  
+  
+  .material-icons {
+    font-size: inherit;
+    font-size: 24px;
+    font-weight: bold; 
+  }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "demoone-f449c": {
+      "hosting": {
+        "angularProjectV4": [
+          "demoone-f449c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "demoone-f449c"
+  }
+}

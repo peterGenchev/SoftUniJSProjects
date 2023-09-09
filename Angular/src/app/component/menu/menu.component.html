@@ -1,0 +1,66 @@
+<div class="category-buttons">
+  <mat-card class="category-card" (click)="selectCategory('food')">
+    <mat-card-content class="category-content">
+      <span class="material-icons">FOOD</span>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card class="category-card" (click)="selectCategory('drinks')">
+    <mat-card-content class="category-content">
+      <span class="material-icons">DRINKS</span>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div *ngIf="selectedCategory === 'food'">
+  <div class="menu-category">
+    <h1></h1>
+    <div class="menu-container">
+      <div *ngFor="let menuItem of menuItems" class="menu-item-card">
+        <img [src]="menuItem.imageUrl" alt="{{ menuItem.name }}" class="menu-item-image">
+        <h3 class="menu-item-name">{{ menuItem.name }}</h3>
+        <!-- <p class="menu-item-description">{{ menuItem.description }}</p> -->
+        <p class="menu-item-price">Price: ${{ menuItem.price }}</p>
+        <ng-container *ngIf="isLoggedIn">
+          <div class="quantity-container">
+            <button (click)="decreaseQuantity(menuItem)">-</button>
+            <input type="number" [(ngModel)]="menuItem.quantity" name="quantityInput">
+            <button (click)="increaseQuantity(menuItem)">+</button>
+          </div>
+
+          <button class="add-to-cart-btn" (click)="addToOrders(menuItem)">Add to My Order</button>
+          <a class="add-to-cart-btn" [routerLink]="['/details', menuItem.orderId]">Details</a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedCategory === 'drinks'">
+  <div class="menu-category">
+    <h1></h1>
+    <div class="menu-container">
+      <div *ngFor="let menuDrink of menuDrinks" class="menu-item-card">
+        <img [src]="menuDrink.imageUrl" alt="{{ menuDrink.name }}" class="menu-item-image">
+        <h3 class="menu-item-name">{{ menuDrink.name }}</h3>
+        <!-- <p class="menu-item-description">{{ menuDrink.description }}</p> -->
+        <p class="menu-item-price">Price: ${{ menuDrink.price }}</p>
+        <ng-container *ngIf="isLoggedIn">
+          <div class="quantity-container">
+            <button (click)="decreaseQuantity(menuDrink)">-</button>
+            <input type="number" [(ngModel)]="menuDrink.quantity" name="quantityInput">
+            <button (click)="increaseQuantity(menuDrink)">+</button>
+          </div>
+          
+          <button class="add-to-cart-btn" (click)="addToOrders(menuDrink)">Add to My Order</button>
+          <a class="add-to-cart-btn" [routerLink]="['/details', menuDrink.orderId]">Details</a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,22 @@
+<div class="search-container">
+
+  <input class="search-input" type="text" [(ngModel)]="searchItem" placeholder="Search menu items">
+  <button class="search-button" (click)="searchMenu()">Search</button>
+  <div class="search-results">
+    <ng-container *ngIf="filteredMenuItems.length > 0; else noResults">
+      <div class="search-result-item" *ngFor="let menuItem of filteredMenuItems">
+        <div class="search-result-content">
+          <img [src]="menuItem.imageUrl" alt="{{ menuItem.name }}" class="menu-item-image">
+          <div class="menu-item-details">
+            <p class="menu-item-name">{{ menuItem.name }}</p>
+            <p class="menu-item-price">Price: ${{ menuItem.price }}</p>
+          </div>
+          <button class="add-to-orders-button" (click)="addToOrders(menuItem)">Add to Orders</button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #noResults>
+      <p class="no-results-message">No items found.</p>
+    </ng-template>
+  </div>

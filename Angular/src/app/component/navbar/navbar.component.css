@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f7faf7;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 70px; 
+    height: 70px;
+    margin-right: 50px; 
+  }
+
+  .logo-text {
+    font-size:54px; 
+    font-weight:bolder; 
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }

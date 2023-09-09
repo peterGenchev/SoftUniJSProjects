@@ -1,0 +1,28 @@
+<nav>
+  <div routerLink="/" class="logo">
+    <img src="assets/images/logo3.png" alt="FoodBear" />
+    <span class="logo-text">FoodBear</span>
+  </div>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/restaurants">Restaurants</a></li>
+      <li><a routerLink="/menu">Menu</a></li>
+      <ng-container *ngIf="isLoggedIn; else loggedOut">
+        <li><a routerLink="/my-orders">My order</a></li>
+        <li><a routerLink="/search">Search</a></li>
+        <li><a routerLink="" (click)="logout()">Logout</a></li>
+      </ng-container>
+      <ng-template #loggedOut>
+      
+        <li>
+          <a routerLink="/login">Login</a>
+        </li>
+        <li>
+          <a routerLink="/register">Register</a>
+        </li>
+      </ng-template>
+     
+    </ul>
+  </nav>
+
+  

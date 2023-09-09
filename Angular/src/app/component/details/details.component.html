@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>{{ menuItem?.name }}</h2>
+  <img src="{{ menuItem?.imageUrl }}" alt="{{ menuItem?.name }}" class="menu-image">
+  <p>{{ menuItem?.description }}</p>
+  <p>Price: {{ menuItem?.price }}</p>
+
+  <button class="back-button" (click)="goBack()">Back to Menu</button>
+</div>

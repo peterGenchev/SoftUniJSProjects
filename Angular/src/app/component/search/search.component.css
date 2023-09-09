@@ -1,0 +1,89 @@
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #2a9e1d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #21ae32;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+  }
+  
+  .search-input {
+    width: 30%; 
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .search-results {
+    width: 80%; 
+    margin-top: 20px;
+  }
+
+
+  .search-result-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .search-result-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-item-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .menu-item-details {
+    flex: 1;
+  }
+  
+  .menu-item-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .menu-item-price {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .no-results-message{
+    font-size: 50px; 
+    text-align: center;
+    margin: 420px auto;
+  }
